@@ -1,0 +1,19 @@
+#include "monty.h"
+
+/**
+ * _pall - function that Prints the values of a stack_t linked list
+ * @stack: A pointer to the top mode node of a stack_t linked list
+ * @line_no: The current working line number of a Monty bytecodes file
+ */
+
+void _pall(stack_t **stack, unsigned int line_no)
+{
+	stack_t *tmp = (*stack)->next;
+
+	while (tmp)
+	{
+		printf("%d\n", tmp->n);
+		tmp = tmp->next;
+	}
+	(void)line_no;
+}
